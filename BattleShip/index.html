@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battelships</title>
+    <script src="js/function.js"></script>
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Battelships Game
+        </h1>
+    </header>
+
+    <main>
+
+        <section class="selected">
+            <!-- -->
+
+
+            <form>
+                <div>
+                    <h2 class="title_grid">Choose your grid size</h2>
+                    <div>
+                        <section class="part1">
+                            <input checked type="radio" id="10x10" name="gridSize" value="10" class="gridSize">
+                            <label for="10x10">10 x 10</label><br>
+                            <input type="radio" id="11x11" name="gridSize" value="11" class="gridSize">
+                            <label for="11x11">11 x 11</label><br>
+                            <input type="radio" id="12x12" name="gridSize" value="12" class="gridSize">
+                            <label for="12x12">12 x 12</label><br>
+                        </section>
+                        <section class="part2">
+                            <input type="radio" id="13x13" name="gridSize" value="13" class="gridSize">
+                            <label for="13x13">13 x 13</label><br>
+                            <input type="radio" id="14x14" name="gridSize" value="14"  class="gridSize">
+                            <label for="14x14">14 x 14</label><br>
+                            <input type="radio" id="15x15" name="gridSize" value="15"  class="gridSize">
+                            <label for="15x15">15 x 15</label><br>
+                        </section>
+                    </div>
+                </div>
+                <div class="battelships_number">
+                    <h2 class="title_grid">Please choose numbers of battelships</h2>
+                    <label for="ship2">battelship size 2:</label>
+                    <input class="size" id="ship2" type="number" minlength="2" value="0" max="4" min="0"><br><br>
+                    <label for="ship3">battelship size 3:</label>
+                    <input class="size" id="ship3" type="number" value="0" max="3" min="0"><br><br>
+                    <label for="ship4">battelship size 4:</label>
+                    <input class="size" id="ship4" type="number" value="0" max="2" min="0"><br><br>
+                    <label for="ship5">battelship size 5:</label>
+                    <input class="size" id="ship5" type="number" value="0" max="2" min="0"><br><br>
+                </div>
+            </form>
+            <div>
+                <button type="shipmit" id="startBattle">START BATTLE</button>
+            </div>
+        </section>
+        <section id="board">
+            <table id="displayGrid">
+
+            </table>
+        </section>
+
+        <section>
+
+            <table class="information">
+                <tr>
+                    <th colspan="2" id="haedline">Number of remaining battelships:</th>
+                </tr>
+                <tr>
+                    <th id="shipType">ship Type</th>
+                    <th id="shipAmount">ship Amount</th>
+                </tr>
+                <tr>
+                    <td>ship type 2:</td>
+                    <td class="sumOfShips" id="sumShip2">0</td>
+                </tr>
+                <tr>
+                    <td>ship type 3:</td>
+                    <td class="sumOfShips" id="sumShip3">0</td>
+                </tr>
+                <tr>
+                    <td>ship type 4:</td>
+                    <td class="sumOfShips" id="sumShip4">0</td>
+                </tr>
+                <tr>
+                    <td>ship type 5:</td>
+                    <td class="sumOfShips" id="sumShip5">0</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <div class="show" >
+        <img id="shipSunk"  src="#" alt="">
+    </div>
+    <div class="finish" >
+        <h1 id="gameOver"></h1>
+    </div>
+</body>
+
+</html>
